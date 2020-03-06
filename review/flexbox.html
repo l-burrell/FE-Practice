@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flexbox Review</title>
+    </head>
+    <body>
+        <h1>Flexbox</h1>
+        <hr>
+        <section class="flex">
+            <img src="img/car.jpg" alt="vehicle 1">
+            <img src="img/car.jpg" alt="vehicle 2">
+            <img src="img/car.jpg" alt="vehicle 3">
+            <img src="img/car.jpg" alt="vehicle 4">
+            <img src="img/car.jpg" alt="vehicle 5">
+            <img src="img/car.jpg" alt="vehicle 6">
+        </section>
+    </body>
+    <style>
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        section img {
+            margin: 10px;
+            width: 350px;
+            transition: 1s;
+        }
+        section img:hover {
+            transform: scale(1.1);
+            border: solid black 1px;
+        }
+        h1 {
+            text-align: center;
+        }
+        hr {
+            margin-bottom: 30px;
+        }
+    </style>
+</html>
