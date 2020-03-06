@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript 1</title>
+    </head>
+    <body>
+        <h1>JavaScript Review 1</h1>
+    </body>
+    <script>
+        document.write("Hello World <br/>");
+        console.log('Hello World')
+        let num = 10;
+        let age = 2;
+
+        let names = ['ben', 'tom', 'jerry', 'robert', 'jimmy', 'mike', 'batman', 'jake'];
+        for(name in names){
+            let n = (names[name].charAt(0) === 'j') ? document.write(names[name] + '<br/>') : 'Name was not found!';
+        }
+        if(age < 5){
+            document.write('Sorry, looks like you are too young to play!<br/>');
+        }
+        while(num <= 15){
+            document.write(num);
+            num++;
+        }
+    </script>
+</html>
