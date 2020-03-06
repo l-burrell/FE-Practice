@@ -16,7 +16,7 @@
         </section>
         <section>
             <header>
-                <h3>Table of Lorem</h3>
+                <h3>Table of Random</h3>
             </header>
             <table>
                 <thead>
@@ -55,8 +55,26 @@
                 </tbody>
             </table>
         </section>
+
+        <!-- TODO: Learn a better technique to implement the footer -->
+        <footer>
+            <div>
+                <h4>fake logo</h4>
+            </div>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </footer>
     </body>
     <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            /* padding: 0; */
+        }
+
         main, section {
             margin: 40px auto;
             max-width: 800px;
@@ -82,6 +100,30 @@
         }
         tr:nth-child(even){
             background-color: rgb(195, 228, 178);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        footer ul {
+            display: inline-block;
+        }
+        footer ul li {
+            display: inline-block;
+            list-style: none;
+            padding: 20px;
+        }
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        footer div {
+            display: inline-block;
+            padding-left: 250px;
+            width: 600px;
         }
     </style>
 </html>
