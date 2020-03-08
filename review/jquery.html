@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery: Reviews</title>
+        <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <h1>JQuery</h1>
+        <div id="hide">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta perferendis, pariatur amet ab eaque magnam dolorem voluptates optio quae sit, excepturi vel, porro suscipit cum at libero odio in quos corporis ipsam sequi aut animi placeat. Aut consequuntur eligendi officiis?</p>
+            <button id="hide1">Hide Content</button>
+        </div>
+
+        <div>
+            <p id="hide2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rem est aperiam perferendis, facilis beatae facere ut! Ab tempore corrupti, dignissimos blanditiis, eius doloremque incidunt, dolore eaque veniam quis quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, ad.</p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minima repudiandae deserunt officia, harum sunt temporibus esse hic dolorum labore magni facilis consectetur reprehenderit culpa id obcaecati sapiente sed similique blanditiis eos eum cum voluptatum, molestiae nisi! Vel ex a laudantium ad obcaecati, earum sed porro distinctio esse aperiam odio voluptatum dignissimos id.</p> -->
+            <button id="show2">show more</button>
+        </div>
+
+        <div>
+            <p id='more'><span class='pop'>Double click the button this time!</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima porro quae dolore veniam! Reiciendis dolorem esse ex veritatis dicta necessitatibus? Quo itaque earum error et omnis odio accusantium, sapiente magni quos hic necessitatibus nihil illo quibusdam tenetur nesciunt cum officia deleniti eos possimus, animi tempore. Quo enim quod minus commodi harum tempore obcaecati debitis, optio consequuntur doloremque error qui.</p>
+            <button id='morebtn'>more</button>
+        </div>
+
+        <div>
+            <p id='food'>What would you like to eat for lunch?</p>
+            <button id='foodbtn'>respond..</button>
+        </div>
+    </body>
+    <style>
+        div {
+            /* max-width: 500px; */
+            margin: auto;
+        }
+        p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background-color: #5cc;
+            padding: 20px;
+        }
+        #hide p {
+            background-color: #ecc;
+        }
+        #more {
+            display:none;
+        }
+        .pop {
+            color: rgba(145, 26, 137, 0.774);
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        var foodarr = ['hamburger', 'rice', 'chicken BLT', 'broccoli salad', 'ice cream', 'tacos'];
+        $(document).ready(function() {
+            $("#hide1").click(function() {
+                $('#hide').hide(3000);
+            });
+            $('#show2').click(function() {
+                $('#hide2').css('white-space', 'normal');
+            });
+            $('#morebtn').click(function() {
+                $('#more').slideDown('slow', function(){
+                });
+            })
+            $('#morebtn').dblclick(function() {
+                $('#more').css('white-space', 'normal');
+            })
+            $('#foodbtn').click(function() {
+                
+                $('#food').append('<br/>Reponse: ' + foodarr[Math.floor(Math.random() * 6)]
+                );
+            })
+        })
+    </script>
+</html>

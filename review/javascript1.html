@@ -4,7 +4,15 @@
         <title>JavaScript 1</title>
     </head>
     <body>
-        <h1>JavaScript Review 1</h1>
+        <div>
+            <h1>JavaScript Review 1</h1>
+            <input type="text" id="user" onchange='changeit()'>
+            <button onclick="welcome()">Submit Your Name</button>
+            <p onmouseover="big()" onmouseout="small()" id='test4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dicta maiores nobis commodi, est quae sequi consequatur natus sint harum?</p>
+            <br id='content'>
+            <p id='testit'>testing</p>
+            <br/>
+        </div>
     </body>
     <script>
         document.write("Hello World <br/>");
@@ -23,5 +31,33 @@
             document.write(num);
             num++;
         }
+        var welcome = function () {
+            let nm = document.getElementById('user').value;
+            document.write('welcome ' + nm);
+        }
+        const hello = function() {
+            let p = document.getElementById('user').value;
+            document.write(' ' + p);
+            return p;
+        }
+        let dem = document.getElementById('user').value;
+        document.write('<br/><br/>');
+        hello();
+        // console.log(hello());
+        function big() {
+         document.getElementById('test4').style.textTransform = 'uppercase';
+         document.getElementById('test4').style.color = 'red';
+         document.getElementById('test4').innerHTML = 'Oh you change the text! Think you can change it back??';
+        }
+        function small() {
+         document.getElementById('test4').style.textTransform = 'capitalize';
+         document.getElementById('test4').style.color = "green";
+         document.getElementById('test4').innerHTML = "Nope, you cant change it back.. Unless... you refresh the page =D.";
+        }
+        function changeit(){
+            document.getElementById('testit').style.color = "purple";
+            document.getElementById('testit').style.fontSize = '60px';
+        }
+
     </script>
 </html>
