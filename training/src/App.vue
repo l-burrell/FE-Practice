@@ -9,15 +9,14 @@
 <script>
 import Home from "./components/Home";
 import Blog from "./components/Blog";
-import Navigation from './components/Navigation';
+import Navigation from "./components/Navigation";
 
 export default {
   name: "App",
   components: {
     Home,
     Blog,
-    Navigation,
-
+    Navigation
   }
 };
 </script>
