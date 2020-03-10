@@ -2,6 +2,7 @@
   <div id="app">
     <Home />
     <Menu />
+    <Mix />
     <Footer/>
   </div>
 </template>
@@ -9,6 +10,7 @@
 <script>
 import Home from './components/Home.vue'
 import Menu from './components/Menu.vue'
+import Mix from './components/Mix.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -16,6 +18,7 @@ export default {
   components: {
     Home,
     Menu,
+    Mix,
     Footer,
   }
 }

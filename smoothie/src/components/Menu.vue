@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id='menu'>
         <h2>Our ever changing menu</h2>
         <table>
             <thead>
@@ -66,7 +66,7 @@ table {
     margin: auto;
     padding: 50px;
 }
-td,th {
+td, th {
     padding: 20px;
 }
 </style>
