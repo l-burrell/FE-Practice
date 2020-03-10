@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="specials">
         Specials will be here
     </section>
 </template>

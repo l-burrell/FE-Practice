@@ -3,6 +3,8 @@
     <Home />
     <Menu />
     <Mix />
+    <Specials />
+    <Newsletter />
     <Footer/>
   </div>
 </template>
@@ -11,6 +13,8 @@
 import Home from './components/Home.vue'
 import Menu from './components/Menu.vue'
 import Mix from './components/Mix.vue'
+import Specials from './components/Specials.vue'
+import Newsletter from './components/Newsletter.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -19,6 +23,8 @@ export default {
     Home,
     Menu,
     Mix,
+    Specials,
+    Newsletter,
     Footer,
   }
 }
