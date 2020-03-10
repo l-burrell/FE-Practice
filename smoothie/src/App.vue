@@ -1,18 +1,21 @@
 <template>
   <div id="app">
     <Home />
+    <Menu />
     <Footer/>
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue'
+import Menu from './components/Menu.vue'
 import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     Home,
+    Menu,
     Footer,
   }
 }
