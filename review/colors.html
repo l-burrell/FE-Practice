@@ -5,17 +5,23 @@
     </head>
     <body>
         <h1>Collection of my favorite colors</h1>
-        <div id='c-success'>success</div>
-        <div id='c-warning'>warning</div>
-        <div id='c-primary'></div>
-        <div id='c-black'></div>
-        <div id='c-grey'></div>
-        <div id='c-white'></div>
-        <div id='c-blue'></div>
-        <div id='c-bluel'></div>
-        <div id='c-purple'></div>
-        <div id='c-purplel'></div>
-        <div id='c-'></div>
+        <div id='colors'>
+            <main>
+                <div id='c-primary'></div>
+                <div id='c-black'></div>
+                <div id='c-grey'></div>
+                <div id='c-white'></div>
+                <div id='c-blue'></div>
+                <div id='c-bluel'></div>
+                <div id='c-purple'></div>
+                <div id='c-purplel'></div>
+                <div id='c-'></div>
+            </main>
+            <aside>
+                <div id='c-success'>success</div>
+                <div id='c-warning'>warning</div>
+            </aside>
+        </div>
     </body>
     <style>
         div {
@@ -25,14 +31,22 @@
             margin: 30px;
             padding: 10px;
         }
+        h1 {
+            text-align: center;
+        }
+        #colors {
+            display: flex;
+        }
         #c-primary {
             background-color: #402ee0;
         }
         #c-warning {
             background-color: #b63333;
+            height: 300px;
         }
         #c-success {
             background-color: #33b633;
+            height: 300px;
         }
         #c-black {
             background-color: #262229;
