@@ -84,6 +84,7 @@
 
                 if(!followRules) {
                     document.getElementById('rules').style.display = 'block';
+                    console.log('invalid input was entered.')
                     return;
                 } else {
                     document.getElementById('rules').style.display = 'none';
@@ -93,19 +94,32 @@
                 //FIX THIS CODE HERE
                 animals.splice(species.indexOf(animal_species), 1);
                 animals.splice(enclosure.indexOf(animal_enclosure), 1);
-                document.getElementById('animals').style.display = 'block';
+                display();
             }
 
-            var p = document.getElementById('addData');
-            var row = document.createElement('tr');
-            var col = document.createElement('td');
-            var text = document.createTextNode(animals[2]);
-            row.appendChild(col);
-            row.appendChild(col);
-            row.appendChild(col);
-            p.appendChild(row);
+            function clearPastData() {
+                document.getElementById('list_animal_species').value = '';
+                document.getElementById('list_animal_enclosure').value = '';
+            }
+
+            function displayData() {
+                var p = document.getElementById('addData');
+                var row = document.createElement('tr');
+
+                var col_species = document.createElement('td');
+                var col_enclosure = document.createElement('td');
+                var textSpecies = document.createTextNode(animals[0].animal_species);
+                var textEnclosure = document.createTextNode(animals[0].animal_enclosure);
+
+                col_species.appendChild(textSpecies);
+                col_enclosure.appendChild(textEnclosure);
+                row.appendChild(col_species);
+                row.appendChild(col_enclosure);
+                p.appendChild(row);
+            }
 
             function createPotentialAnimals() {
+                clearPastData();
                 var rand = Math.floor(Math.random() * 9);
                 for(i = 0; i <= rand; i++) {
                     let temp_species = species[Math.floor(Math.random() * species.length)];
@@ -122,6 +136,7 @@
                     document.getElementById('potential-animals').append(potentialAnimals[i] + ", ");
                     document.getElementById('enclosures').append(potentialEnclosures[i] + ", ");
                 }
+                document.getElementById('animals').style.display = 'block';
             }
 
         </script>
