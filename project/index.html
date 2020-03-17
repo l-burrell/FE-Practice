@@ -11,9 +11,9 @@
         <main>
             <section id="potential-animals"></section>
             <section id="enclosures"></section>
+            <p id="done">You have finished playing this round! Refresh to play again.</p>
             <section class="list">
                 <input type="text" id="list_animal_species" name="animal" placeholder="species"/>
-                <!-- <input type="text" id="list_animal_name" name="animal" placeholder="name"/> -->
                 <input type="text" id="list_animal_enclosure" name="animal" placeholder="enclosure"/>
                 <button id="addAnimal" onclick="addAnimal()">Add Animal</button>
                 <p id='rules'>You need to select an animal from the list, and choose one of the remaining enclosures to place the animal.</p>
@@ -44,6 +44,20 @@
             #animals {
                 display: none;
             }
+            #done {
+                z-index: 2;
+                background-color:rgb(61, 202, 68);
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+                padding: 20%;
+
+                position: absolute;
+                top: 20%;
+                right: 0;
+                left: 0;
+                display: none;
+            }
             #rules {
                 display: none;
                 background-color: rgb(202, 70, 61);
@@ -62,7 +76,7 @@
 
             const species = ['bear', 'fish', 'horse', 'sheep', 'donkey', 'fox', 'pig', 'deer'];
 
-            let happyAnimals = 0, totalAnimals = 0;
+            let happyAnimals = 0, totalAnimals = 0, index = 0;
             
             let animals = [], potentialAnimals = [], potentialEnclosures = [];
 
@@ -90,11 +104,11 @@
                     document.getElementById('rules').style.display = 'none';
                 }
                 animals.push({animal_species: animal_species, animal_enclosure: animal_enclosure});
-                
-                //FIX THIS CODE HERE
-                animals.splice(species.indexOf(animal_species), 1);
-                animals.splice(enclosure.indexOf(animal_enclosure), 1);
+                potentialAnimals.splice(potentialAnimals.indexOf(animal_species), 1);
+                potentialEnclosures.splice(potentialEnclosures.indexOf(animal_enclosure), 1);
+
                 display();
+                displayData();
             }
 
             function clearPastData() {
@@ -108,14 +122,15 @@
 
                 var col_species = document.createElement('td');
                 var col_enclosure = document.createElement('td');
-                var textSpecies = document.createTextNode(animals[0].animal_species);
-                var textEnclosure = document.createTextNode(animals[0].animal_enclosure);
+                var textSpecies = document.createTextNode(animals[index].animal_species);
+                var textEnclosure = document.createTextNode(animals[index].animal_enclosure);
 
                 col_species.appendChild(textSpecies);
                 col_enclosure.appendChild(textEnclosure);
                 row.appendChild(col_species);
                 row.appendChild(col_enclosure);
                 p.appendChild(row);
+                index++;
             }
 
             function createPotentialAnimals() {
@@ -132,6 +147,12 @@
             function display() {
                 document.getElementById('potential-animals').innerHTML = "available animals: ";
                 document.getElementById('enclosures').innerHTML = "available enclosure: ";
+                if(potentialAnimals.length === 0){
+                    document.getElementById('done').style.display = 'block';
+                    document.getElementById('addAnimal').style.display = 'none';
+                    clearPastData();
+                    return;
+                }
                 for(i = 0; i < potentialAnimals.length; i++){
                     document.getElementById('potential-animals').append(potentialAnimals[i] + ", ");
                     document.getElementById('enclosures').append(potentialEnclosures[i] + ", ");
