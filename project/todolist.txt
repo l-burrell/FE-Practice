@@ -1,0 +1,16 @@
+
+todo for this project
+1) separate concerns (html/css/js into individual files)
+2) clean up the styling for an more appealing design
+3) clean up javascript: better naming conventions, remove any repetitiveness, etc.
+4) test game features: ensure buttons work, data is displayed, and scores are calculated.
+5) add scores: rate the user on the enclosures they put the animals in.
+
+Game rules
+- must place all animals inside enclosures
+- should place the animals in the best enclosure for them:
+    note:
+        determine the best enclosure for each animal (1 good = 3pt, 1 okay = 2pt, anything else bad = 1pt)
+        calculate total possible points (3 * total animals)
+        calculate user score (add all points / total points)
+        display points at find screen
