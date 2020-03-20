@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>JQuery: Reviews</title>
+        <link rel="stylesheet" href="css/jquery.css">
         <script
 			  src="https://code.jquery.com/jquery-3.4.1.min.js"
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -31,29 +32,6 @@
             <button id='foodbtn'>respond..</button>
         </div>
     </body>
-    <style>
-        div {
-            /* max-width: 500px; */
-            margin: auto;
-        }
-        p {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            background-color: #5cc;
-            padding: 20px;
-        }
-        #hide p {
-            background-color: #ecc;
-        }
-        #more {
-            display:none;
-        }
-        .pop {
-            color: rgba(145, 26, 137, 0.774);
-            font-weight: bold;
-        }
-    </style>
     <script>
         var foodarr = ['hamburger', 'rice', 'chicken BLT', 'broccoli salad', 'ice cream', 'tacos'];
         $(document).ready(function() {

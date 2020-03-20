@@ -1,0 +1,23 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+section img {
+    margin: 10px;
+    width: 350px;
+    transition: 1s;
+}
+section img:hover {
+    transform: scale(1.1);
+    border: solid black 1px;
+}
+h1 {
+    text-align: center;
+}
+hr {
+    margin-bottom: 30px;
+}
+article {
+    width: 400px;
+}

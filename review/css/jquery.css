@@ -1,0 +1,21 @@
+div {
+    /* max-width: 500px; */
+    margin: auto;
+}
+p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #5cc;
+    padding: 20px;
+}
+#hide p {
+    background-color: #ecc;
+}
+#more {
+    display:none;
+}
+.pop {
+    color: rgba(145, 26, 137, 0.774);
+    font-weight: bold;
+}
