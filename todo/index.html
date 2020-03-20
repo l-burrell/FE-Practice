@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo List</title>
+    </head>
+    <body>
+        <main>
+            <h1>Todo List Application</h1>
+            <form>
+                <input type="text" id="item">
+            </form>
+            <button onclick="addTask()">Add Task</button>
+        </main>
+        <div id="list_items"></div>
+        <script>
+            function addTask(){
+                var item = document.getElementById("item").value;
+                let p = document.createElement("p");
+                let text = document.createTextNode(item);
+                let 
+                p.appendChild(text);
+                let list_items = document.getElementById("list_items");
+                list_items.appendChild(p);
+            }
+        </script>
+        <style>
+            form {
+                display: inline-block;
+            }
+            
+        </style>
+    </body>
+</html>
