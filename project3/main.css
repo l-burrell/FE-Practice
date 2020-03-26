@@ -1,0 +1,11 @@
+main {
+    border: solid black 4px;
+    max-width: 800px;
+    padding: 40px;
+    translate: 40% 10%;
+    transition: 1s;
+}
+main:hover {
+    background-color: rgb(218, 56, 28);
+    transition: 3s;
+}
