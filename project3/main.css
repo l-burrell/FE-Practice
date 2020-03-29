@@ -37,6 +37,6 @@ button:hover {
     border-bottom: solid black 1px;
     width: 80%;
 }
-#welcome {
-    /* display:none; */
+#game {
+    display:none;
 }
