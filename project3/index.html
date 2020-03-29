@@ -11,7 +11,7 @@
         <h1 id="title">Does it feel warm in here?</h1>
         <section id="welcome">
             <button id="btnhot" onclick="beginGame()">Im on fire!</button>
-            <button id="btncold">I still have cold feet..</button>
+            <button id="btncold" onclick="coldFeet()">I still have cold feet..</button>
         </section>
         <section id="game">
             <section id="rules">
@@ -23,8 +23,8 @@
             </section>
             <section id="board">
                 <form>
-                    <input type="text" id="guessNum">
-                    <button>Guess</button>
+                    <input type="number" id="guessNum" placeholder="Guess a number">
+                    <button onclick="guessNumber()" type="button">Guess</button>
                 </form>
             </section>
         </section>
