@@ -1,0 +1,11 @@
+
+todo 
+-----------
+1) functionality: cold feet button.
+
+2) Well functionality is just about done, now I need to 
+focus more on the design portion. Maybe make it look 
+more appealing to the eyes. 
+
+We will see.
+

@@ -46,22 +46,26 @@ input {
 #game {
     display:none;
 }
-#d5 {
+#board p {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.d0 {
+    background-color: green;
+}
+.d0::before {
+    content: "YOU GUESSED IT -  ";
+}
+.d2 {
     background-color: rgb(255, 7, 7);
-    border: dashed yellow 3px;
 }
-#d10 {
-    background-color: rgb(224, 78, 42);
+.d5 {
+    background-color: rgb(255, 57, 7);
 }
-#d20 {
-    background-color: rgb(199, 105, 43);
+.d10 {
+    background-color: rgb(241, 176, 79);
 }
-#d30 {
-    background-color: rgb(228, 165, 50);
-}
-#d40 {
+.d20 {
     background-color: rgb(36, 145, 235);
-}
-#d50 {
-    background-color: rgb(57, 53, 245);
 }

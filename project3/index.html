@@ -9,6 +9,7 @@
 <body>
     <main>
         <h1 id="title">Does it feel warm in here?</h1>
+        <h3>By: l-burrell</h3>
         <section id="welcome">
             <button id="btnhot" onclick="beginGame()">Im on fire!</button>
             <button id="btncold" onclick="coldFeet()">I still have cold feet..</button>
@@ -20,9 +21,11 @@
                 <p>TIP 2: You must watch the color to determine if you are hot or cold.</p>
                 <p>TIP 3: When it is a deep red, you are on fire! And close to winning! </p>
                 <p>TIP 4: When it is blue, you are far away from the correct answer.</p>
+                <p>TIP 5: If you attempt to make the same guess a second time, it wont work!</p>
             </section>
             <section id="board">
-                <form>
+                <p id="score"></p>
+                <form id="display">
                     <input type="number" id="guessNum" placeholder="Guess a number">
                     <button onclick="guessNumber()" type="button">Guess</button>
                 </form>
