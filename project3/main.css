@@ -9,6 +9,9 @@ main:hover {
     background-color: rgb(218, 56, 28);
     transition: 5s;
 }
+section {
+    margin: auto;
+}
 button {
     border: none;
     cursor: pointer;
@@ -16,10 +19,14 @@ button {
     color: white;
     font-weight: bold;
     margin: auto 5px;
+    background-color: #111;
 }
 button:hover {
     border: solid black 1px;
     transition: 2s;
+}
+input {
+    height: 30px;
 }
 #btnhot {
     background-color: rgb(255, 60, 0);
