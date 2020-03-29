@@ -10,7 +10,7 @@
     <main>
         <h1 id="title">Does it feel warm in here?</h1>
         <section id="welcome">
-            <button id="btnhot">Im on fire!</button>
+            <button id="btnhot" onclick="beginGame()">Im on fire!</button>
             <button id="btncold">I still have cold feet..</button>
         </section>
         <section id="game">
@@ -21,7 +21,14 @@
                 <p>TIP 3: When it is a deep red, you are on fire! And close to winning! </p>
                 <p>TIP 4: When it is blue, you are far away from the correct answer.</p>
             </section>
+            <section>
+                <form>
+                    <input type="text" id="guessNum">
+                    <button>Guess</button>
+                </form>
+            </section>
         </section>
     </main>
+    <script src="main.js"></script>
 </body>
 </html>
