@@ -27,3 +27,16 @@ button:hover {
 #btncold {
     background-color: rgb(36, 104, 230);
 }
+#rules {
+    font-size: 12px;
+    /* border: solid black 1px; */
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+#rules h3 {
+    border-bottom: solid black 1px;
+    width: 80%;
+}
+#welcome {
+    /* display:none; */
+}
