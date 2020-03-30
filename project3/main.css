@@ -43,7 +43,7 @@ input {
     border-bottom: solid black 1px;
     width: 80%;
 }
-#game {
+#game, #cold {
     display:none;
 }
 #board p {

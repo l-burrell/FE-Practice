@@ -3,8 +3,6 @@
 // THANKS FOR VIEWING
 
 var answer = selectSolution();
-var redBtn = document.getElementById("btnHot");
-var blueBtn = document.getElementById("btnCold");
 var board = document.getElementById("board");
 var total = document.getElementById("score");
 var previousGuesses = [];
@@ -14,9 +12,14 @@ function beginGame() {
     document.getElementById("title").innerHTML = "Let the game commence!";
     document.getElementById("welcome").style.display = "none";
     document.getElementById("game").style.display = "block";
+    document.getElementById("cold").style.display = "none";
     // document.getElementById("title").innerHTML = answer; // debugging purposes only
 }
-
+function coldFeet() {
+    document.getElementById("title").innerHTML = "Seems your feeling a little cold..";
+    document.getElementById("welcome").style.display = "none";
+    document.getElementById("cold").style.display = "block";
+}
 function selectSolution() {
     var solution = Math.floor(Math.random() * 99) + 1;
     return solution;
