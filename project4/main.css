@@ -6,7 +6,7 @@ button {
     width: 140px;
     height: 100px;
     border: none;
-    background-color: hsl(200, 60%, 60%);
+    background-color: hsl(200, 60%, 70%);
     padding: 5px;
     margin: 5px;
     font-size: 40px;
@@ -36,6 +36,9 @@ button:hover {
     display: flex;
     flex-direction: column;
 }
-#enter {
+#btnEnter {
     background-color: rgb(43, 255, 0);
+}
+#btnEnter:hover {
+    background-color: rgba(36, 179, 7, 0.959);
 }
