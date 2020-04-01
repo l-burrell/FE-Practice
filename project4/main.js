@@ -28,20 +28,34 @@ var display = document.getElementById("data");
 
 //other data
 var hold = [];
+var foundSolution = false;
 
 init();
 
 function init(){
+    display.disabled = true;
     display.value = "";
 }
 
-
 function putValue(t){
     var data = t.innerHTML;
-    display.value += " " + data;
+    if(foundSolution === true){
+        display.value = "";
+        foundSolution = false;
+    }
+    if(data === "+" || data === "-" || data === "/" || data === "*"){
+        // display.value += " " + data + " ";
+        var newVal = hold[0]+hold[1];
+       hold.splice(0, 2, newVal);
+    } else {
+        display.value += data;
+    }
     hold.push(data);
 }
 
 function beginCalculating() {
     console.log(hold);
+    var result = "Feature in progress...";
+    display.value = "" + result;
+    foundSolution = true;
 }
