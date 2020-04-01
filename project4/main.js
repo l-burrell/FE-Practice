@@ -22,3 +22,26 @@ var btnMinus = document.getElementById("btnMinus");
 var btnMultiply = document.getElementById("btnMultiply");
 var btnDivide = document.getElementById("btnDivide");
 var btnEnter = document.getElementById("btnEnter");
+
+//display screen
+var display = document.getElementById("data");
+
+//other data
+var hold = [];
+
+init();
+
+function init(){
+    display.value = "";
+}
+
+
+function putValue(t){
+    var data = t.innerHTML;
+    display.value += " " + data;
+    hold.push(data);
+}
+
+function beginCalculating() {
+    console.log(hold);
+}
