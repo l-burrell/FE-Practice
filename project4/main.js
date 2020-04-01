@@ -28,8 +28,9 @@ var display = document.getElementById("data");
 
 //other data
 var hold = [];
-var foundSolution = false;
-
+var calc = 0;
+var solution = 0;
+var clear = false;
 init();
 
 function init(){
@@ -38,24 +39,31 @@ function init(){
 }
 
 function putValue(t){
+    //ISSUE IN THIS METHOD
     var data = t.innerHTML;
-    if(foundSolution === true){
+    calc = parseInt(display.value);
+    if(clear){
         display.value = "";
-        foundSolution = false;
+        clear = false;
     }
-    if(data === "+" || data === "-" || data === "/" || data === "*"){
-        // display.value += " " + data + " ";
-        var newVal = hold[0]+hold[1];
-       hold.splice(0, 2, newVal);
+
+    //FIX THIS, DOESN'T FUNCTION CORRECTLY!!! May need to redo entire method.
+    if(data === '+'){
+        hold.push(calc);
+        display.value = "";
+        solution = hold[0] + hold[1];
     } else {
         display.value += data;
     }
-    hold.push(data);
+
+
+    if(hold.length > 1){
+        hold.splice(0, 2, solution);
+        clear = true;
+    }
 }
 
 function beginCalculating() {
-    console.log(hold);
-    var result = "Feature in progress...";
-    display.value = "" + result;
-    foundSolution = true;
+    console.log("HOLD VALUE: " + hold);
+    display.value = solution;
 }
