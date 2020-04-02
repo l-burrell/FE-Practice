@@ -48,6 +48,12 @@ function putValue(t){
     }
 
     //FIX THIS, DOESN'T FUNCTION CORRECTLY!!! May need to redo entire method.
+    //describe issue:
+    /** Unfortunately to submit the final input clicked, we must once again click a control
+     * button. this is not ideal. We want to be able to instead click 
+     * on the enter key, and have that input the final submission.
+     * Then return the value to the display.
+     */
     if(data === '+'){
         hold.push(calc);
         display.value = "";
