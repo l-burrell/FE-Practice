@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Hidden Cards</title>
 </head>
 <body>
     <main>
         <section id="welcome">
             <h1>Lets play hidden cards</h1>
-            <h3>l-burrell</h3>
+            <h3>By: l-burrell</h3>
         </section>
         <section id="instructions">
             <h3>Here are the instructions</h3>
@@ -18,9 +19,10 @@
             <p>Simple right? Lets play!</p>
         </section>
         <section id="board">
-            <section id="card">
+            <section id="card" onclick="turn()">
+                <img src="" id="card-image" alt="image not available">
+                <h3 id="card-title">card title</h3>
                 <p id="card-description">card description goes here</p>
-                
             </section>
         </section>
     </main>

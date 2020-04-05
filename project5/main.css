@@ -1,0 +1,25 @@
+#board {
+    margin-top: 50px;
+}
+#card {
+    width: 400px;
+    /* height: 600px; */
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+    border: solid black 2px;
+    cursor: pointer;
+    background-color: hsl(250, 60%, 80%);
+}
+#card-image {
+    border-radius: 25px;
+    margin: 20px;
+}
+#instructions {
+    line-height: 0.5;
+}
+#welcome h3 {
+    font-size: 15px;
+    position: relative;
+    top: -20px;
+}
