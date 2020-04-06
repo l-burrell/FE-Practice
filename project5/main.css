@@ -13,7 +13,8 @@
 }
 #card-image {
     border-radius: 25px;
-    margin: 20px;
+    margin: auto;
+    width: 100%;
 }
 #instructions {
     line-height: 0.5;
