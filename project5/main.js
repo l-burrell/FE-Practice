@@ -5,6 +5,10 @@ var cardTitle = document.getElementById('card-title');
 var cardDes = document.getElementById('card-description');
 var cardImg = document.getElementById("img");
 
+var isFlipped = false;
+
 function turn() {
-    console.log("do something...")
+    if(isFlipped){
+        
+    }
 }
