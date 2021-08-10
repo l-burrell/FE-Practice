@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(75, 192, 153);
+    font-size: 20px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 150px 50px;
+}
+.title {
+    text-align: center;
+    padding: 50px;
+    font-size: 60px;
+}
+.message {
+    text-align: center;
+    margin-top: 100px;
+}
+#quotes {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(250, 233, 233);
+    border: solid 1px grey;
+    border-radius: 5px;
+    width: 800px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+#author {
+    font-size: 35px;
+}
